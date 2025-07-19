@@ -76,33 +76,34 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    
     try {
-      const response = await fetch('https://portfolio-rho-seven-68.vercel.app/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Portfolio Contact: ${formData.subject}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Subject: ${formData.subject}\n\n` +
+        `Message:\n${formData.message}`
+      );
+      
+      const mailtoLink = `mailto:abhinav.gera12@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
+      
+      setModal({
+        isOpen: true,
+        type: 'success',
+        title: 'Message Sent Successfully!',
+        message: 'Thank you for reaching out! Your email client should open with the message. I\'ll get back to you soon.'
       });
-
-      if (response.ok) {
-        setModal({
-          isOpen: true,
-          type: 'success',
-          title: 'Message Sent Successfully!',
-          message: 'Thank you for reaching out! I\'ll get back to you soon.',
-        });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        throw new Error('Email failed');
-      }
+      
+      setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       setModal({
         isOpen: true,
         type: 'error',
         title: 'Error',
-        message: 'There was an issue sending your message. Please try again or contact me directly.',
+        message: 'There was an issue sending your message. Please try again or contact me directly.'
       });
     }
   };
