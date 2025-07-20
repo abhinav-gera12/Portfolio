@@ -121,102 +121,100 @@ export const Contact: React.FC = () => {
         title={modal.title}
         message={modal.message}
       />
-      <section id="contact" className="py-20 bg-black">
-      <div className="max-w-[1400px] mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
-          <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+      <section id="contact" className="py-12 sm:py-16 md:py-20 bg-black">
+      <div className="max-w-[1400px] mx-auto px-2 sm:px-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-4xl font-bold text-white mb-2 sm:mb-4">Get In Touch</h2>
+          <div className="w-16 sm:w-24 h-1 bg-red-600 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-gray-300 max-w-xl sm:max-w-2xl mx-auto text-base sm:text-lg">
             I'm always open to discussing new opportunities and interesting projects
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
-            
-            <div className="space-y-6 mb-8">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-white" />
+            <h3 className="text-lg sm:text-2xl font-bold text-white mb-4 sm:mb-8">Let's Connect</h3>
+
+            <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg flex items-center justify-center">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-gray-300">Email</p>
-                  <p className="text-white font-medium">abhinav.gera12@gmail.com</p>
+                  <p className="text-gray-300 text-xs sm:text-sm">Email</p>
+                  <p className="text-white font-medium text-sm sm:text-base">abhinav.gera12@gmail.com</p>
                 </div>
               </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
+
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg flex items-center justify-center">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-gray-300">Phone</p>
-                  <p className="text-white font-medium">+91-7527901209</p>
+                  <p className="text-gray-300 text-xs sm:text-sm">Phone</p>
+                  <p className="text-white font-medium text-sm sm:text-base">+91-7527901209</p>
                 </div>
               </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-white" />
+
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-gray-300">Location</p>
-                  <p className="text-white font-medium">Patiala, Punjab, India</p>
+                  <p className="text-gray-300 text-xs sm:text-sm">Location</p>
+                  <p className="text-white font-medium text-sm sm:text-base">Patiala, Punjab, India</p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-white">Follow Me</h4>
-              <div className="flex space-x-4">
+            <div className="space-y-2 sm:space-y-4">
+              <h4 className="text-base sm:text-xl font-semibold text-white">Follow Me</h4>
+              <div className="flex space-x-3 sm:space-x-4">
                 <a
                   href="https://www.github.com/abhinav-gera12"
-                  className="w-12 h-12 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors duration-300"
                   aria-label="GitHub"
-                  target='_blank'
+                  target='_blank' rel="noopener noreferrer"
                 >
-                  <Github className="w-6 h-6 text-white" />
+                  <Github className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/abhinav-gera12"
-                  className="w-12 h-12 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors duration-300"
                   aria-label="LinkedIn"
-                  target='_blank'
+                  target='_blank' rel="noopener noreferrer"
                 >
-                  <Linkedin className="w-6 h-6 text-white" />
+                  <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </a>
                 <a
                   href="https://leetcode.com/u/abhinav_gera12/"
-                  className="w-12 h-12 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors duration-300"
                   aria-label="LeetCode"
-                  target='_blank'
+                  target='_blank' rel="noopener noreferrer"
                 >
-                  <Code className="w-6 h-6 text-white" />
+                  <Code className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </a>
                 <a
                   href="https://www.instagram.com/abhinav_12o2/"
-                  className="w-12 h-12 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors duration-300"
                   aria-label="Instagram"
-                  target='_blank'
+                  target='_blank' rel="noopener noreferrer"
                 >
-                  <Instagram className="w-6 h-6 text-white" />
+                  <Instagram className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </a>
-
-                
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white/10 backdrop-blur-md rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">Send Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
+          <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 sm:p-8">
+            <h3 className="text-lg sm:text-2xl font-bold text-white mb-4 sm:mb-6">Send Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-gray-300 mb-1 sm:mb-2">
                     Name
                   </label>
                   <input
@@ -226,12 +224,12 @@ export const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/50 transition-all duration-300"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/50 transition-all duration-300 text-sm sm:text-base"
                     placeholder="Your Name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-gray-300 mb-1 sm:mb-2">
                     Email
                   </label>
                   <input
@@ -241,14 +239,14 @@ export const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/50 transition-all duration-300"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/50 transition-all duration-300 text-sm sm:text-base"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
-              
+
               <div>
-                <label htmlFor="subject" className="block text-gray-300 mb-2">
+                <label htmlFor="subject" className="block text-gray-300 mb-1 sm:mb-2">
                   Subject
                 </label>
                 <input
@@ -258,13 +256,13 @@ export const Contact: React.FC = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/50 transition-all duration-300"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/50 transition-all duration-300 text-sm sm:text-base"
                   placeholder="Project Discussion"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="message" className="block text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-gray-300 mb-1 sm:mb-2">
                   Message
                 </label>
                 <textarea
@@ -274,14 +272,14 @@ export const Contact: React.FC = () => {
                   onChange={handleInputChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/50 transition-all duration-300 resize-none"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-400/50 transition-all duration-300 resize-none text-sm sm:text-base"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>

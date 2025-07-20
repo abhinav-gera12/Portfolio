@@ -25,10 +25,16 @@ export const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/70 backdrop-blur-lg shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="max-w-[1400px] mx-auto px-4 py-4">
+      <div className="max-w-[1400px] mx-auto px-2 sm:px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <div className="block sm:hidden">
+              <h1 className={`text-base font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}>
+                Abhinav Gera
+              </h1>
+            </div>
             <div className="hidden sm:block">
               <h1 className={`text-xl font-bold transition-colors duration-300 ${
                 isScrolled ? 'text-gray-900' : 'text-white'
@@ -44,14 +50,14 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-4 sm:space-x-8">
             {['about', 'skills', 'projects', 'experience', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
                 className={`capitalize font-medium transition-colors duration-300 hover:text-red-500 ${
                   isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                } text-sm sm:text-base`}
               >
                 {item}
               </button>
@@ -64,6 +70,7 @@ export const Header: React.FC = () => {
             className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${
               isScrolled ? 'text-gray-700' : 'text-white'
             }`}
+            aria-label="Open navigation menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -71,13 +78,13 @@ export const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4">
-            <nav className="flex flex-col space-y-3">
+          <div className="md:hidden mt-3 sm:mt-4 bg-white rounded-lg shadow-lg p-3 sm:p-4">
+            <nav className="flex flex-col space-y-2 sm:space-y-3">
               {['about', 'skills', 'projects', 'experience', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="capitalize font-medium text-gray-700 hover:text-red-500 transition-colors text-left"
+                  className="capitalize font-medium text-gray-700 hover:text-red-500 transition-colors text-left text-base"
                 >
                   {item}
                 </button>

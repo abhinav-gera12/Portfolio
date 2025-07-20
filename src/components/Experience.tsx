@@ -32,37 +32,37 @@ export const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white">
-      <div className="max-w-[1400px] mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Experience</h2>
-          <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+    <section id="experience" className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="max-w-[1400px] mx-auto px-2 sm:px-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">Experience</h2>
+          <div className="w-16 sm:w-24 h-1 bg-red-600 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-gray-600 max-w-xl sm:max-w-2xl mx-auto text-base sm:text-lg">
             My professional journey and key achievements in software development
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-2xl sm:max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-red-200"></div>
-            
+
             {experiences.map((exp, index) => (
-              <div key={index} className="relative mb-12 md:mb-16">
+              <div key={index} className="relative mb-8 sm:mb-12 md:mb-16">
                 {/* Timeline dot */}
                 <div className="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-red-600 rounded-full border-4 border-white shadow-lg"></div>
-                
+
                 {/* Content */}
-                <div className={`ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
-                  <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div className="mb-4">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <div className={`ml-10 sm:ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
+                  <div className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div className="mb-3 sm:mb-4">
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">
                         {exp.position}
                       </h3>
-                      <h4 className="text-lg font-semibold text-red-600 mb-2">
+                      <h4 className="text-base sm:text-lg font-semibold text-red-600 mb-1 sm:mb-2">
                         {exp.company}
                       </h4>
-                      <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                      <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600">
                         <div className="flex items-center space-x-1">
                           <MapPin size={16} />
                           <span>{exp.location}</span>
@@ -73,9 +73,9 @@ export const Experience: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    <ul className="space-y-2">
+                    <ul className="space-y-1 sm:space-y-2">
                       {exp.description.map((item, itemIndex) => (
-                        <li key={itemIndex} className="text-gray-600 flex items-start">
+                        <li key={itemIndex} className="text-gray-600 flex items-start text-xs sm:text-sm">
                           <span className="text-red-600 mr-2">•</span>
                           {item}
                         </li>
