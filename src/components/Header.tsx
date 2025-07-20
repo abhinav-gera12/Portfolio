@@ -28,20 +28,13 @@ export const Header: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-2 sm:px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 sm:space-x-3">
-            <div className="block sm:hidden">
-              <h1 className={`text-base font-bold transition-colors duration-300 ${
+            <div>
+              <h1 className={`text-base sm:text-xl font-bold transition-colors duration-300 ${
                 isScrolled ? 'text-gray-900' : 'text-white'
               }`}>
                 Abhinav Gera
               </h1>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className={`text-xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              }`}>
-                Abhinav Gera
-              </h1>
-              <p className={`text-sm transition-colors duration-300 ${
+              <p className={`text-xs sm:text-sm transition-colors duration-300 ${
                 isScrolled ? 'text-gray-600' : 'text-gray-200'
               }`}>
                 Software Engineer
