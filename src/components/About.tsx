@@ -39,7 +39,7 @@ export const About: React.FC = () => {
               Software Engineer & Backend Specialist
             </h3>
             <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-              Currently working as a Software Engineer at Altrum AI, where I design Python microservices 
+              Completed notice period as a Software Engineer at Altrum AI, where I design Python microservices 
               and Golang inference systems for backend scalability. I specialize in building AI-powered 
               systems with a focus on security, performance, and real-time processing.
             </p>

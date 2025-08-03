@@ -7,7 +7,7 @@ export const Experience: React.FC = () => {
       position: "Software Engineer - I",
       company: "Altrum AI",
       location: "Remote",
-      duration: "Jul 2024 - Present",
+      duration: "Jul 2024 - Aug 2025",
       description: [
         "Designed Python microservices and Golang inference systems for backend scalability",
         "Created and documented REST APIs, led integration discussions, and improved API efficiency",
