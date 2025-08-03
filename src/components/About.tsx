@@ -78,9 +78,7 @@ export const About: React.FC = () => {
             <div className="bg-red-50 p-4 sm:p-8 rounded-lg">
               <h4 className="text-lg sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-4">Education</h4>
               <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg sm:text-xl">PU</span>
-                </div>
+                <img src="/education-1.png" alt="Punjabi University Logo" className="w-12 sm:w-16 object-contain" />
                 <div>
                   <h5 className="text-base sm:text-xl font-semibold text-gray-900">Bachelor of Computer Applications (BCA)</h5>
                   <p className="text-red-600 font-medium text-sm sm:text-base">Punjabi University</p>

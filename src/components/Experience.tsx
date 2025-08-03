@@ -4,8 +4,13 @@ import { MapPin, Calendar } from 'lucide-react';
 export const Experience: React.FC = () => {
   const experiences = [
     {
-      position: "Software Engineer - I",
-      company: "Altrum AI",
+      position: "Software Engineer - 1",
+      company: (
+        <span className="flex items-center gap-3 pb-2">
+          <img src="/altrum-logo.jpeg" alt="Altrum AI Logo" className="w-8 h-8 inline-block" />
+          <span className="text-lg sm:text-xl font-semibold text-red-600">Altrum AI</span>
+        </span>
+      ),
       location: "Remote",
       duration: "Jul 2024 - Aug 2025",
       description: [
@@ -19,7 +24,12 @@ export const Experience: React.FC = () => {
     },
     {
       position: "Software Engineer Intern",
-      company: "Aligne AI",
+      company: (
+        <span className="flex items-center gap-3 pb-2">
+          <img src="/aligne-logo.jpeg" alt="Aligne AI Logo" className="w-8 h-8 inline-block" />
+          <span className="text-lg sm:text-xl font-semibold text-red-600">Aligne AI</span>
+        </span>
+      ),
       location: "Remote",
       duration: "Apr 2024 - Jun 2024",
       description: [
@@ -56,13 +66,13 @@ export const Experience: React.FC = () => {
                 <div className={`ml-10 sm:ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
                   <div className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <div className="mb-3 sm:mb-4">
-                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2 text-center">
                         {exp.position}
                       </h3>
-                      <h4 className="text-base sm:text-lg font-semibold text-red-600 mb-1 sm:mb-2">
+                      <div className="flex items-center justify-center mb-3 sm:mb-4">
                         {exp.company}
-                      </h4>
-                      <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600">
+                      </div>
+                      <div className="flex flex-col items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600">
                         <div className="flex items-center space-x-1">
                           <MapPin size={16} />
                           <span>{exp.location}</span>
